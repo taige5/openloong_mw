@@ -54,7 +54,7 @@ rosrun openloong_mw openloongIf_br
 
 ## openloong_mw/config/yaml 是任务的选项配置，如下所示：
 
-### actions.yaml
+### Minute_Maid.yaml
 
 ```yaml
 - action: "Minute_Maid" #名字在older和pose中需要有对应，如果有一部分不想开可以和下面一样注释掉
@@ -93,7 +93,7 @@ rosrun openloong_mw openloongIf_br
 
 ---
 
-## pose文件是记录的轨迹信息
+## pose文件是记录的轨迹信息的txt
 
 由先前的 `vr_udp_mini_gai_jilu.py` 遥操作记录得到，其列数有 18：
 
@@ -102,7 +102,7 @@ rosrun openloong_mw openloongIf_br
 - 14 执行时间
 - 15-17 腰部关节0、头部关节0、头部关节1
 
-## older 是默认物体位置信息
+## older 是默认物体位置信息的txt
 
 每次采集前需记录好，共 12 列 4 行，四行一致：
 
@@ -127,16 +127,6 @@ switch(lsm_main){
         if(key==KEY_2){
             ROS_INFO("Active fenjian Mode");
             lsm_main=20;
-            timer=0;
-        }
-        if(key==KEY_3){
-            ROS_INFO("Active fenjian Mode");
-            lsm_main=30;
-            timer=0;
-        }
-        if(key==KEY_7){
-            ROS_INFO("Active LLM skill Mode shuiguo");
-            lsm_main=70;
             timer=0;
         }
         if(key==KEY_){
